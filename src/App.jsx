@@ -3,7 +3,7 @@ import './App.css'
 import Notes from './components/Notes'
 
 function App() {
-  const [notes, setNotes] = useState([
+  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes")) || [
     {
       id: 0,
       text: "Note 1"
